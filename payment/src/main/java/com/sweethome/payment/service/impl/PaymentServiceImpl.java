@@ -1,6 +1,5 @@
 package com.sweethome.payment.service.impl;
 
-import com.sweethome.payment.feign.PaymentServiceClient;
 import com.sweethome.payment.model.TransactionDetailsEntity;
 import com.sweethome.payment.repository.TransactionRepository;
 import com.sweethome.payment.service.PaymentService;
@@ -13,8 +12,6 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Autowired
     private TransactionRepository transactionRepository;
-    @Autowired
-    private PaymentServiceClient paymentServiceClient;
     @Autowired
     ModelMapper modelMapper;
 
