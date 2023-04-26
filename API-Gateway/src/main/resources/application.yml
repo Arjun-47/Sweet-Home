@@ -1,0 +1,38 @@
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+    instance:
+      production
+  instance:
+    #instance-id: API-GATEWAY:9191
+    hostname: localhost
+server:
+  port: 9191
+
+spring:
+  application:
+    name: API-GATEWAY
+
+  cloud:
+    gateway:
+      routes:
+      - id: BOOKING-SERVICE
+        uri: lb://BOOKING-SERVICE
+        predicates:
+          - Path=/hotel/**
+
+      - id: PAYMENT-SERVICE
+        uri: lb://PAYMENT-SERVICE
+        predicates:
+          - Path=/payment/**
+      discovery:
+        locator:
+          enabled: true
+
+
+
