@@ -2,6 +2,7 @@ package com.sweethome.booking.model;
 
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;
 
@@ -19,8 +20,11 @@ public class BookingInfoEntity {
     private String roomNumbers;
     @Column(nullable = false)
     private int roomPrice;
-    @Column(nullable = false)
+    @Column(columnDefinition = "integer default 0")
     private int transactionId;
+
+    @Column(updatable = false)
+    @CreationTimestamp
     private Date bookedOn;
 
     public int getBookingId() {
