@@ -4,7 +4,6 @@ public class TransactionDTO {
 
     private int transactionId;
     private String paymentMode;
-
     private int bookingId;
 
     private String upiId;

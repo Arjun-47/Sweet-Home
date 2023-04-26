@@ -3,7 +3,6 @@ package com.sweethome.payment.service.impl;
 import com.sweethome.payment.model.TransactionDetailsEntity;
 import com.sweethome.payment.repository.TransactionRepository;
 import com.sweethome.payment.service.PaymentService;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,8 +11,6 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Autowired
     private TransactionRepository transactionRepository;
-    @Autowired
-    ModelMapper modelMapper;
 
     @Override
     public int createTransaction(TransactionDetailsEntity transactionDetailsEntity) {
