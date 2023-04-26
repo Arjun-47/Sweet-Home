@@ -10,6 +10,7 @@ public class TransactionDetailsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int transactionId;
+    @Column(nullable = false)
     private String paymentMode;
     @Column(nullable = false)
     private int bookingId;
