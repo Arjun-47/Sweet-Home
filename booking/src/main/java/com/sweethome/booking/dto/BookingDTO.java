@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class BookingDTO {
 
-    private int bookingId;
+    private int id;
     private Date fromDate;
     private Date toDate;
     private String aadharNumber;
@@ -14,12 +14,12 @@ public class BookingDTO {
     private int transactionId;
     private Date bookedOn;
 
-    public int getBookingId() {
-        return bookingId;
+    public int getId() {
+        return id;
     }
 
-    public void setBookingId(int bookingId) {
-        this.bookingId = bookingId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Date getFromDate() {
